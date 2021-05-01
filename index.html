@@ -10,8 +10,28 @@
     <img
       src="./img/KOLYMA2_Logo_Heart_07.jpg"
       alt="yellow start on red background"
-      onclick="document.getElementById('bella-ciao').play();"
+      onclick="playSpecial();"
     />
-    <audio id="bella-ciao" src="./music/bella-ciao.mp3" loop autoplay></audio>
+    <!-- onclick="document.getElementById('bella-ciao').play();" -->
+
+    <audio id="bella-ciao" src="./music/bella-ciao.mp3" loop></audio>
+
+    <script type="text/javascript">
+      function playSpecial() {
+        document.getElementById("bella-ciao").paused
+          ? document.getElementById("bella-ciao").play()
+          : document.getElementById("bella-ciao").pause();
+      }
+
+      // const bellaCiao = document.getElementById("bella-ciao");
+
+      // function playAndStop() {
+      //   if (bellaCiao.paused) {
+      //     bellaCiao.play();
+      //   } else {
+      //     bellaCiao.pause();
+      //   }
+      // }
+    </script>
   </body>
 </html>
